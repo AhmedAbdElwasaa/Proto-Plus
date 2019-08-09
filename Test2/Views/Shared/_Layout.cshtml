@@ -1,0 +1,37 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Css/Site.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1> Welcome to Test2</h1>
+        <menu>
+            <ul>
+                <li><a asp-controller="App" asp-action="Index">Home</a></li>
+                <li><a asp-controller="App" asp-action="Contact">Contact</a></li>
+                <li><a asp-controller="App" asp-action="About">About</a></li>
+
+            </ul>
+        </menu>
+    </header>
+ <section>
+    <h2>@ViewBag.Title</h2>
+     @RenderBody()
+ </section>
+
+    <footer>
+        Copyright 2019 AAE
+    </footer>
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/Js/index.js"></script>
+    @RenderSection("scripts", false)
+</body>
+
+</html>
