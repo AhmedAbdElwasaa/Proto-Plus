@@ -32,7 +32,7 @@ namespace Test2.Controllers
             }
             else
             {
-                //
+                // nothing todo
             }
             return View();
         }
