@@ -27,7 +27,8 @@ namespace Test2.Controllers
             ViewBag.Title = "Contact Us";
             if(ModelState.IsValid)
             {
-                //
+                //send the email
+
             }
             else
             {
