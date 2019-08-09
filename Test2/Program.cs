@@ -19,7 +19,18 @@ namespace Test2
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .ConfigureAppConfiguration(SetupConfiguration)
                 .UseStartup<Startup>()
                 .Build();
+
+        private static void SetupConfiguration(WebHostBuilderContext ctx, IConfigurationBuilder builder)
+        {
+            //removing the default configuration options
+            builder.Sources.Clear();
+            builder.AddJsonFile("config.json", false, true)
+                .AddXmlFile("config.xml", true)
+                .AddEnvironmentVariables();
+
+        }
     }
 }

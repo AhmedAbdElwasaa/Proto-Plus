@@ -6,30 +6,42 @@
 <head>
     <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
+    <link href="~/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="~/Css/Site.css" rel="stylesheet" />
 </head>
 
 <body>
-    <header>
-        <h1> Welcome to Test2</h1>
-        <menu>
-            <ul>
-                <li><a asp-controller="App" asp-action="Index">Home</a></li>
-                <li><a asp-controller="App" asp-action="Contact">Contact</a></li>
-                <li><a asp-controller="App" asp-action="About">About</a></li>
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+                    <h1 class="navbar-brand"><i class="fa fa-paint-brush"></i> Welcome to Proto-Plus</h1>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#theMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="theMenu" class="navbar-collapse collapse">
+                        <ul class="navbar-nav">
+                            <li class="navbar-item"><a class="nav-link" asp-controller="App" asp-action="Index">Home</a></li>
+                            <li class="navbar-item"><a class="nav-link" asp-controller="App" asp-action="Contact">Contact</a></li>
+                            <li class="navbar-item"><a class="nav-link" asp-controller="App" asp-action="About">About</a></li>
 
-            </ul>
-        </menu>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
     </header>
- <section>
-    <h2>@ViewBag.Title</h2>
-     @RenderBody()
- </section>
+    <section class="container-fluid">
+        <h2 class="text-center">@ViewBag.Title</h2>
+        @RenderBody()
+    </section>
 
-    <footer>
+    <footer class="container-fluid text-center">
         Copyright 2019 AAE
     </footer>
     <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/Js/index.js"></script>
     @RenderSection("scripts", false)
 </body>

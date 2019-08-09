@@ -1,0 +1,10 @@
+﻿{
+  "Colors": {
+    "Favourite": "blue"
+  },
+
+  "ConnectionStrings": {
+    "ProtoConnectionString": "Server=.;Database=ProtoPlus;Integrated Security=true;MultipleActiveResultSets=true;"
+  }
+
+}
