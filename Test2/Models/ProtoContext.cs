@@ -21,9 +21,14 @@ namespace Test2.Models
         {
             base.OnModelCreating(modelBuilder);
 
-            //modelBuilder.Entity<Order>().HasData(new Order() {
-                   
-            //   });
+            //modelBuilder.Entity<Product>()
+            //    .Property(e => e.Title)
+            //    .HasMaxLength(50);
+          
+            //modelBuilder.Entity<Order>().HasData(new Order()
+            //{
+
+            //});
         }
     }
 }

@@ -10,7 +10,7 @@ using Test2.Models;
 
 namespace Test2.Migrations
 {
-    [DbContext(typeof(ProtoContext))]
+    [DbContext(typeof(IProtoRepository))]
     [Migration("20190809214204_test2")]
     partial class test2
     {

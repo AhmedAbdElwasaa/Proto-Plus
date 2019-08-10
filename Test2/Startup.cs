@@ -29,8 +29,13 @@ namespace Test2
                 cfg.UseSqlServer(_config.GetConnectionString("ProtoConnectionString"));
             } );
 
+            services.AddScoped<IProtoRepository, ProtoRepository>();
+
+            services.AddTransient<ProtoSeeder>();
+
             services.AddTransient<IMailService, NullMailService>();
             //support for real mail service
+
 
             services.AddMvc();
         }

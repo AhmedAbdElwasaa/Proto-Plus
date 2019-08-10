@@ -10,7 +10,7 @@ using Test2.Models;
 
 namespace Test2.Migrations
 {
-    [DbContext(typeof(ProtoContext))]
+    [DbContext(typeof(IProtoRepository))]
     partial class ProtoContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

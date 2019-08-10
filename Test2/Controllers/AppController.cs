@@ -12,16 +12,17 @@ namespace Test2.Controllers
     public class AppController:Controller
     {
         private readonly IMailService _mailService;
-        private readonly ProtoContext _context;
+        private readonly IProtoRepository _repository;
 
-        public AppController(IMailService mailService,ProtoContext context)
+        public AppController(IMailService mailService,IProtoRepository repository)
         {
             _mailService = mailService;
-            _context = context;
+            _repository = repository;
         }
 
         public IActionResult Index()
         {
+            var results = _repository.GetAllProducts();
             return View();
         }
 
@@ -61,9 +62,7 @@ namespace Test2.Controllers
         public IActionResult Shop()
         {
 
-            var res = _context.Products
-                .OrderBy(p => p.Category)
-                .ToList();
+            var res = _repository.GetAllProducts();
             return View(res);
         }
     }

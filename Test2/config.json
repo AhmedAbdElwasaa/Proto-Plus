@@ -5,6 +5,13 @@
 
   "ConnectionStrings": {
     "ProtoConnectionString": "Server=.;Database=ProtoPlus;Integrated Security=true;MultipleActiveResultSets=true;"
+  },
+
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning"
+    }
   }
 
 }
